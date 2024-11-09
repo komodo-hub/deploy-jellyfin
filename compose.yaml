@@ -5,7 +5,7 @@ services:
     user: ${UID:-0}:${GID:-0}
     restart: ${RESTART:-unless-stopped}
     ports:
-      - ${JELLYFIN_PORT}:8096
+      - ${JELLYFIN_PORT:-8096}:8096
     volumes:
       - ${MEDIA_PATH:?MEDIA_PATH required in env}:/media
       - ${CONFIG_PATH:-config}:/config
