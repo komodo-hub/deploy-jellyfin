@@ -4,6 +4,8 @@ services:
     image: jellyfin/jellyfin:${JELLYFIN_TAG:-latest}
     user: ${UID:-0}:${GID:-0}
     restart: ${RESTART:-unless-stopped}
+    logging:
+      driver: ${LOGGING_DRIVER:-local}
     ports:
       - ${JELLYFIN_PORT:-8096}:8096
     volumes:

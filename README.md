@@ -30,6 +30,7 @@ environment = """
   JELLYFIN_TAG = latest
   RESTART = unless-stopped
   NETWORK_MODE = bridge
+  LOGGING_DRIVER = local
   UID = 0
   GID = 0
 """
