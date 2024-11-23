@@ -13,10 +13,6 @@ https://jellyfin.org/docs/general/installation/container#using-docker-compose
 name = "jellyfin"
 [stack.config]
 repo = "komodo-hub/deploy-jellyfin"
-file_paths = [
-  "compose.yaml",
-  # "caddy.compose.yaml" # Deploy https proxy
-]
 environment = """
   ## Required
   MEDIA_PATH = /path/to/media
